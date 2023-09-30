@@ -44,22 +44,28 @@ function panda_delete($table_name, $field_variable){
 
 function panda_update($table_name,$field_name,$field_value,$id){
     
-    $feild_array = explode(",",$field_name);
+    $field_array = explode(",",$field_name);
     $feild_value_array = explode(",",$field_value);
     $update_str = "";
-    if(count($feild_array) == count($feild_value_array)){
-       for($i=0 ; $i<= 5 ; $i++){}
-    }
-    die();
+    $field_name_length= count($field_array);
+    
+    $field_value_length= count($feild_value_array);
+    
+    if($field_name_length == $field_value_length){
+   
+        for($i=0 ; $i<$field_name_length ; $i++){
+            $update_str .= $field_array[$i] . "= '"  . $feild_value_array[$i]."',";
+            
+        }
+        $update_str= trim($update_str,",");
 
-    $update_query= "UPDATE $table_name SET  WHERE  id='$id'";
-    return mysqli_query(connect_to_db(),$update_query);
-    // explode(",","$field_name");
-    // echo "<pre>";
-    //  print_r(explode(",",$field_name));
-    //  print_r(explode(",",$field_value));
-    // return $update_query= "UPDATE $table_name SET $field_name=$field_value WHERE  id='$id'";
-    // return mysqli_query(connect_to_db(),$update_query);
+         return $update_query= "UPDATE $table_name SET $update_str WHERE id=$id";
+        // return mysqli_query(connect_to_db(),$update_query);
+    }
+    else{
+        echo "somethis is wrong!";
+    }
+    
 }
 
 function panda_image_delete($table_name,$field_name,$field_value,$image_name,$file_name){
