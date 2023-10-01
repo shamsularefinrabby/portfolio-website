@@ -21,20 +21,25 @@ require_once "../db.php";
       <div class="card pd-20 pd-sm-40">
         <h6 class="card-body-title">news with details</h6>
         <p class="mg-b-20 mg-sm-b-30">Fill out your newss </p>
-        <form action="skill-edit-post.php" method="post">
+        <form action="about-edit-post.php" method="post">
           <div class="form-layout">
             <div class="row mg-b-25">
                 <div class="col-lg-6 form-control">
                     <div class="form-group">
-                        <label class="form-control-label">Skill Name: <span class="tx-danger">*</span></label>
-                        <input class="form-control" type="text" name="skill_name" value="<?= panda_single("skill",$_GET['link'])['skill_name']?>">
+                        <label class="form-control-label">Name: <span class="tx-danger">*</span></label>
+                        <input class="form-control" type="text" name="name" value="<?= panda_single("about",$_GET['link'])['name']?>">
                         <input class="form-control" type="hidden" name="hidden_id" value="<?=$_GET['link']?>">
                         
                     </div>
 
                     <div class="form-group">
-                        <label class="form-control-label">Percentage: <span class="tx-danger">*</span></label>
-                        <input class="form-control" type="text" name="percentage" value="<?= panda_single("skill",$_GET['link'])['percentage']?>">
+                        <label class="form-control-label">Designation: <span class="tx-danger">*</span></label>
+                        <input class="form-control" type="text" name="term" value="<?= panda_single("about",$_GET['link'])['term']?>">
+                    
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Description: <span class="tx-danger">*</span></label>
+                        <input class="form-control" type="text" name="story" value="<?= panda_single("about",$_GET['link'])['story']?>">
                     
                     </div>
                     

@@ -29,10 +29,7 @@ function panda_single($table_name,$id){
 
 function panda_insert($table_name, $field_name, $field_variable){
     $insert_query= "INSERT INTO $table_name ($field_name) VALUES ($field_variable)";
-    return mysqli_query(connect_to_db(),$insert_query);
-
-
-
+    mysqli_query(connect_to_db(),$insert_query);
 }
 
 function panda_delete($table_name, $field_variable){

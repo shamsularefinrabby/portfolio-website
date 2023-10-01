@@ -29,7 +29,7 @@ require_once "../db.php";
               <div class="col-lg-6">
                 <div class="form-group">
                   <label class="form-control-label">Name: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="fname">
+                  <input class="form-control" type="text" name="name">
                 </div>
               </div><!-- col-4 -->
               <div class="col-lg-6">
@@ -64,7 +64,7 @@ require_once "../db.php";
           <tbody>
             <?php foreach(panda_all("about") as $new_about) :?>
             <tr>
-              <td><?= $new_about['fname']?></td>
+              <td><?= $new_about['name']?></td>
               <td><?= $new_about['term']?></td>
               <td><?= $new_about['story']?></td>
               <td>

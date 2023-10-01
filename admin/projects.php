@@ -115,8 +115,8 @@ require_once "../db.php";
               <td><?= $new_project['branding']?></td>
               <td>
               <td>
-                <button class="btn btn-sm btn-info"><i class="fa fa-pencil"></i> Edit</button>
-                <a type="button" class="btn btn-sm btn-danger" href="project_delete.php?link=<?=$new_project['id']?>"><i class="fa fa-trash"></i> Delete</a>
+              <a type="button" class="btn btn-sm btn-info" href="project_edit.php?link=<?=$new_project['id']?>"><i class="fa fa-pencil"></i>Edit</a>
+              <a type="button" class="btn btn-sm btn-danger" href="project_delete.php?link=<?=$new_project['id']?>"><i class="fa fa-trash"></i> Delete</a>
 
               
             </tr>
