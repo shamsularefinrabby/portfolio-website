@@ -48,7 +48,6 @@ function panda_update($table_name,$field_name,$field_value,$id){
     $feild_value_array = explode(",",$field_value);
     $update_str = "";
     $field_name_length= count($field_array);
-    
     $field_value_length= count($feild_value_array);
     
     if($field_name_length == $field_value_length){
@@ -59,8 +58,8 @@ function panda_update($table_name,$field_name,$field_value,$id){
         }
         $update_str= trim($update_str,",");
 
-         return $update_query= "UPDATE $table_name SET $update_str WHERE id=$id";
-        // return mysqli_query(connect_to_db(),$update_query);
+        $update_query= "UPDATE $table_name SET $update_str WHERE id=$id";
+        return mysqli_query(connect_to_db(),$update_query);
     }
     else{
         echo "somethis is wrong!";
@@ -77,6 +76,7 @@ function panda_image_delete($table_name,$field_name,$field_value,$image_name,$fi
 
         $delete_query= "DELETE FROM $table_name WHERE $field_name=$field_value";
         return mysqli_query(connect_to_db(),$delete_query);
+
     
 }
 

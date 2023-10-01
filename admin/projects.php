@@ -106,7 +106,7 @@ require_once "../db.php";
             <?php foreach(panda_all('projects') as $new_project) :?>
             <tr>
               <td><?= $new_project['project_name']?></td>
-              <td><img alt="" class="w-25" src="../img/portfolio/<?=$new_project['project_image']?>"></td>
+              <td><img alt="" width="100px" src="../img/portfolio/<?=$new_project['project_image']?>"></td>
               <td><?= $new_project['clients']?></td>
               <td><?= $new_project['completion']?></td>
               <td><?= $new_project['project_type']?></td>

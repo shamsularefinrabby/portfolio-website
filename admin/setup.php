@@ -86,11 +86,13 @@ require_once "../db.php";
                   <input class="form-control" type="text" name="insta" value="<?=panda_setup("setups","insta");?>">
                 </div>
             </div><!-- row -->
-          <div class="col-lg-12">
+
+
+          <div class="form-control col-lg-6 ml-3">
               <div class="col-lg-6">  
                 <div class="form-group">
                   <label class="form-control-label">Old Image : <span class="tx-danger">*</span></label>
-                  <input type="text" name="old_photo_name" value="<?=panda_setup("setups","main_image")?>" >
+                  <input type="text" class="form-control" name="old_photo_name" value="<?=panda_setup("setups","main_image")?>" >
                   <img width="150px" src="../img/setup/<?=panda_setup("setups","main_image")?>" alt="notfound">
                                  
                 </div>
@@ -105,12 +107,28 @@ require_once "../db.php";
             
             </div>
 
-            <div class="col-lg-6">
+           <div class="form-control ml-3 col-lg-5">
+           <div class="col-lg-6">
                 <div class="form-group">
-                  <label class="form-control-label">Colour: <span class="tx-danger">*</span></label>
+                  <label class="form-control-label">Background Colour: <span class="tx-danger">*</span></label>
                   <input class="" type="color" name="primary_background_color" value="<?=panda_setup("setups","primary_background_color")?>">
                 </div>
             </div><!-- row -->
+           
+            <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Headline Colour: <span class="tx-danger">*</span></label>
+                  <input class="" type="color" name="headline_colour" value="<?=panda_setup("setups","headline_colour")?>">
+                </div>
+            </div><!-- row -->
+
+            <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">Text Colour: <span class="tx-danger">*</span></label>
+                  <input class="" type="color" name="text_colour" value="<?=panda_setup("setups","text_colour")?>">
+                </div>
+            </div><!-- row -->
+           </div>
 
           </div>
 

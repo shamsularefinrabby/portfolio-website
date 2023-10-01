@@ -1,5 +1,5 @@
 <?php
-$skill = true;
+$about = true;
 require_once "./header.php";
 require_once "../db.php";
 ?>

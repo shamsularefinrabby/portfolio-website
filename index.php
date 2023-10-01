@@ -47,18 +47,23 @@ require_once "site_header.php";
       </section>
     </div>
   </section>
-
-  <section class="section" style="background: <?=panda_setup("setups","primary_background_color")?>;">
+  
+  
+  
+<section class="section" style="background: <?=panda_setup("setups","primary_background_color")?>;">
     <div class="container">
       <div class="container">
         <div class="row">
+     
         <?php foreach(panda_all('overview') as $view):?>
         <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-in">
           <i class="text-white fa <?=$view['icons']?> fa-4x"></i>
-          <h6 class="text-white"><?=$view['title']?></h6>
-          <p><?=$view['details']?></p>
+          <h6 style="color: <?=panda_setup("setups","headline_colour")?>;"><?=$view['title']?></h6>
+          <p style="color: <?=panda_setup("setups","text_colour")?>;"><?=$view['details']?></p>
         </div>
         <?php endforeach;?>
+      
+        
         
         </div>
       </div>

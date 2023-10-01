@@ -65,7 +65,7 @@ require_once "../db.php";
               <td><?= $new_skill['percentage']?></td>
             
               <td>
-              <a type="button" class="btn btn-sm btn-info" href="skill_edit.php?link=<?=$new_skill['id']?>"><i class="fa fa-pencil"></i>Edit</a>
+                <a type="button" class="btn btn-sm btn-info" href="skill_edit.php?link=<?=$new_skill['id']?>"><i class="fa fa-pencil"></i>Edit</a>
                 <a type="button" class="btn btn-sm btn-danger" href="skill_delete.php?link=<?=$new_skill['id']?>"><i class="fa fa-trash"></i> Delete</a>
               </td>
 

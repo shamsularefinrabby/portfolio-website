@@ -1,6 +1,5 @@
 <?php
 $about=true;
-session_start();
 require_once "./header.php";
 require_once "../db.php";
 ?>
@@ -17,12 +16,12 @@ require_once "../db.php";
 
     <div class="sl-pagebody">
       <div class="sl-page-title">
-        <h3>Overview</h3>
+        <h3>About</h3>
 
       </div><!-- sl-page-title -->
 
       <div class="card pd-20 pd-sm-40">
-        <h6 class="card-body-title">Overview with details</h6>
+        <h6 class="card-body-title">About with details</h6>
         <hr>
         <form action="about_post.php" method="post">
           <div class="form-layout">
@@ -63,14 +62,14 @@ require_once "../db.php";
             </tr>
           </thead>
           <tbody>
-            <?php foreach(panda_all('about') as $new_about) :?>
+            <?php foreach(panda_all("about") as $new_about) :?>
             <tr>
               <td><?= $new_about['fname']?></td>
               <td><?= $new_about['term']?></td>
               <td><?= $new_about['story']?></td>
               <td>
-                <button class="btn btn-sm btn-info"><i class="fa fa-pencil"></i> Edit</button>
-                <a type="button" class="btn btn-sm btn-danger" href="about_delete.php?link=<?=$new_about['id']?>"><i class="fa fa-trash"></i> Delete</a>
+                <a type="button" class="btn btn-sm btn-info" href="about_edit.php?link=<?=$new_about['id']?>"><i class="fa fa-pencil"></i>Edit</a>
+                <a type="button" class="btn btn-sm btn-danger" href="about_delete.php?link=<?=$new_about['id']?>"><i class="fa fa-trash"></i>Delete</a>
               </td>
             </tr>
           </tbody>

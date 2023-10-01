@@ -68,13 +68,13 @@ require_once "../db.php";
             <?php foreach(panda_all('news') as $new_news) :?>
               <tr>
               <td><?= $new_news['news_headline']?></td>
-              <td><img class="w-25" src="../img/news/<?= $new_news['image_new_name']?>" alt=""></td>
+              <td><img width="100px" src="../img/news/<?= $new_news['image_new_name']?>" alt=""></td>
               <td><?= $new_news['news_details']?></td>
               <td><?= $new_news['date_time']?></td>
               <td>
+                <a type="button" class="btn btn-sm btn-info" href="news_edit.php?link=<?=$new_news['id']?>"><i class="fa fa-pencil"></i>Edit</a>
+                <a type="button" class="btn btn-sm btn-danger" href="news_delete.php?link=<?=$new_news['id']?>"><i class="fa fa-trash"></i> Delete</a>
               <td>
-              <a type="button" class="btn btn-sm btn-info" href="news_edit.php?link=<?=$new_news['id']?>"><i class="fa fa-pencil"></i>Edit</a>
-              <a type="button" class="btn btn-sm btn-danger" href="news_delete.php?link=<?=$new_news['id']?>"><i class="fa fa-trash"></i> Delete</a>
 
               
             </tr>

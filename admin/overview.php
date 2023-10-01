@@ -84,7 +84,7 @@ require_once "../db.php";
               <i class="fa <?=$new_view['icons']?> fa-2x"></i>
               </td>
               <td>
-                <button class="btn btn-sm btn-info"><i class="fa fa-pencil"></i> Edit</button>
+                <a type="button" class="btn btn-sm btn-info" href="overview_edit.php?link=<?=$new_view['id']?>"><i class="fa fa-pencil"></i>Edit</a>
                 <a type="button" class="btn btn-sm btn-danger" href="overview_delete.php?link=<?=$new_view['id']?>"><i class="fa fa-trash"></i> Delete</a>
               </td>
             </tr>
