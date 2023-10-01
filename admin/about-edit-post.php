@@ -8,7 +8,11 @@ $story= htmlentities($_POST['story']);
 
 $id= $_POST['hidden_id'];
 
-panda_update("about","name,term,story","$name,$term,$story","$id");
+panda_update("about","name,term","$name,$term","$id");
+
+
+$update_query= "UPDATE about SET story='$story' WHERE id='$id'";
+mysqli_query(connect_to_db(),$update_query);
 
 header('location: about.php');
 

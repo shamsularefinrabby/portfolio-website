@@ -181,7 +181,7 @@ require_once "site_header.php";
       <div class="col-testimonial" data-aos="fade-up">
           <span class="quiote">"</span>
           <p data-aos="fade-up"><?=$all_about['story']?></p>
-          <p class="mt-5 text-dark" data-aos="fade-up"><strong><?=$all_about['fname']?></strong> - <?=$all_about['term']?></p>
+          <p class="mt-5 text-dark" data-aos="fade-up"><strong><?=$all_about['name']?></strong> - <?=$all_about['term']?></p>
         </div>
         <?php endforeach;?>
       </div>

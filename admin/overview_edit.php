@@ -37,11 +37,16 @@ require_once "../db.php";
                         <input class="form-control" type="text" name="details" value="<?= panda_single("overview",$_GET['link'])['details']?>">
                     
                     </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Old icon: <span class="tx-danger">*</span></label>
+                        <input class="form-control" type="text" name="old_icon" value="<?= panda_single("overview",$_GET['link'])['icons']?>">
+                    
+                    </div>
 
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-control-label">Icon:<span class="tx-danger">*</span></label>
-                            <input id="icon_input" class="form-control" type="text" name="icons" >
+                            <input id="icon_input" class="form-control" type="text" name="new_icons" >
                             <br>
                                 <div>
                                     <div style="height: 200px; overflow-y:scroll">

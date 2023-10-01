@@ -59,7 +59,7 @@ function panda_update($table_name,$field_name,$field_value,$id){
         return mysqli_query(connect_to_db(),$update_query);
     }
     else{
-        echo "somethis is wrong!";
+        echo "something is wrong!";
     }
     
 }

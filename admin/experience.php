@@ -76,9 +76,9 @@ require_once "../db.php";
               <td><?= $experience['designation']?></td>
               <td><?= $experience['description']?></td>
               <td>
+                <a type="button" class="btn btn-sm btn-info" href="experience_edit.php?link=<?=$experience['id']?>"><i class="fa fa-pencil"></i> Edit</a>
+                <a type="button" class="btn btn-sm btn-danger" href="experience_delete.php?link=<?=$experience['id']?>"><i class="fa fa-trash"></i> Delete</a>
               <td>
-              <a type="button" class="btn btn-sm btn-info" href="experience_edit.php?link=<?=$experience['id']?>"><i class="fa fa-pencil"></i> Edit</a>
-              <a type="button" class="btn btn-sm btn-danger" href="experience_delete.php?link=<?=$experience['id']?>"><i class="fa fa-trash"></i> Delete</a>
 
               
             </tr>
