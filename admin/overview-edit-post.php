@@ -8,8 +8,8 @@ $old_icon=$_POST['old_icon'];
 $id=$_POST['hidden_id'];
 
 
-$update_query = "UPDATE overview SET title='$title',details='$details' WHERE id='$id'";
-mysqli_query(connect_to_db(),$update_query);
+
+panda_update("overview","title*details","$title*$details","$id");
 
 
 if($new_icons){

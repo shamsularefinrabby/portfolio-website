@@ -41,12 +41,13 @@ function panda_delete($table_name, $field_variable){
 
 function panda_update($table_name,$field_name,$field_value,$id){
     
-    $field_array = explode(",",$field_name);
-    $feild_value_array = explode(",",$field_value);
+    $field_array = explode("*",$field_name);
+    $feild_value_array = explode("*",$field_value);
     $update_str = "";
     $field_name_length= count($field_array);
     $field_value_length= count($feild_value_array);
     
+
     if($field_name_length == $field_value_length){
    
         for($i=0 ; $i<$field_name_length ; $i++){
@@ -56,6 +57,7 @@ function panda_update($table_name,$field_name,$field_value,$id){
         $update_str= trim($update_str,",");
 
         $update_query= "UPDATE $table_name SET $update_str WHERE id=$id";
+        // return $update_query;
         return mysqli_query(connect_to_db(),$update_query);
     }
     else{
@@ -83,3 +85,5 @@ function panda_setup($table_name,$setup_name){
 }
 
 ?>
+
+

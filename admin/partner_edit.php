@@ -28,6 +28,7 @@ require_once "../db.php";
               <?php foreach(panda_all("partners") as $partner_edit)?>
             <div class="col-lg-6">
                 <div class="form-group">
+                <input class="form-control" type="hidden" name="hidden_id" value="<?=$_GET['link']?>">
                     <input class="form-control" type="hidden" name="old_photo_name" value="<?=$partner_edit['partners_image']?>">  
                     <label class="form-control-label">Old Image: <span class="tx-danger">*</span></label>
                     <img alt="" width="100px" src="../img/partners/<?=$partner_edit['partners_image']?>">
